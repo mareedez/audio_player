@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: Poppins, serif;
+    min-width: 320px;
+}
+
+.container {
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 30px 3px rgba(252, 169, 169, 0.6);
+    z-index: 2;
+    position: relative;
+}
+
+.song_image {
+    height: 200px;
+    width: 200px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.cover {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.spinning {
+    animation-name: spinning;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spinning {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg); }
+}
+
+.song_title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.song_singer {
+    font-size: 14px;
+    color: lightslategray;
+    padding-bottom: 13px;
+}
+
+button, .fas {
+    cursor: pointer;
+}
+
+.fas {
+    color: white;
+}
+
+button {
+    background-color: rgba(252, 169, 169, 0.3);
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: rgba(252, 169, 169, 0.6);
+}
+
+.song_control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.song_control-previous {
+    padding: 0 2px 0 0;
+}
+
+.song_control-next {
+    padding: 0 0 0 2px;
+}
+
+.song_control-play {
+    width: 60px;
+    height: 60px;
+    background-color: lightpink;
+}
+
+.fa-play, .fa-pause {
+    font-size: 18px;
+}
+
+.song_control-play:hover {
+    background-color: palevioletred;
+}
+
+
+/*range*/
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #ffffff;
+    background: #f1f1f1;
+    border-radius: 50px;
+    border: 0px solid #ffffff;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 1px #ffffff;
+    border: 0px solid #ffffff;
+    height: 6px;
+    width: 12px;
+    border-radius: 50px;
+    background: #db7093;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: 0px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #f1f1f1;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #ffffff;
+    background: #f1f1f1;
+    border-radius: 50px;
+    border: 0px solid #ffffff;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 1px #ffffff;
+    border: 0px solid #ffffff;
+    height: 6px;
+    width: 12px;
+    border-radius: 50px;
+    background: #db7093;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #f1f1f1;
+    border: 0px solid #ffffff;
+    border-radius: 100px;
+    box-shadow: 0px 0px 0px #ffffff;
+}
+input[type=range]::-ms-fill-upper {
+    background: #f1f1f1;
+    border: 0px solid #ffffff;
+    border-radius: 100px;
+    box-shadow: 0px 0px 0px #ffffff;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: 0px 0px 1px #ffffff;
+    border: 0px solid #ffffff;
+    height: 6px;
+    width: 12px;
+    border-radius: 50px;
+    background: #db7093;
+    cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #f1f1f1;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #f1f1f1;
+}
+
+/*end of range*/
+
+.song_time-now, .song_time-total {
+    color: lightgray;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+.time {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.timeControls {
+    padding-bottom: 20px;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/21a5bcd785.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Audio Player</title>
+</head>
+<body>
+<div class="container">
+    <div class="song_image">
+        <img src="covers/1.jpg" class="cover" alt="album cover">
+    </div>
+    <audio class="audio" src="tracks/bensound-dreams.mp3"></audio>
+    <span class="song_title">Dreams</span>
+    <span class="song_singer">Benjamin Tissot</span>
+    <div class="timeControls">
+        <div class="time">
+            <span class="song_time-now">0:00</span>
+            <span class="song_time-total">3:30</span>
+        </div>
+        <label for="rangeControl">
+            <input class="rangeControl" id="rangeControl" type="range" min="0" max="100" value="0.0" autocomplete="off">
+        </label>
+    </div>
+    <div class="song_control">
+        <button class="song_control-previous"><i class="fas fa-backward"></i></button>
+        <button class="song_control-play"><i class="fas fa-play"></i></button>
+        <button class="song_control-next"><i class="fas fa-forward"></i></button>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
